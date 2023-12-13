@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/shared/global.css" />
+		<link rel="stylesheet" href="/shared/todos.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="title-container">
+				<h1>dohvati jedan todo</h1>
+				<div class="input-container">
+					<a class="button-link" href="/get_all_todos/index.html">previous</a>
+
+					<a class="button-link" href="/get_random_todo/index.html">next</a>
+				</div>
+			</div>
+			<h2>GET <code>https://jsonplaceholder.typicode.com/todos/1</code></h2>
+			<div class="todos">
+				<!-- 
+                <div class="todo">
+                    <div class="todo-title"></div>
+                    <div class="todo-completed"></div>
+                 </div> 
+                -->
+			</div>
+		</div>
+		<script src="/shared/todos.js"></script>
+		<script>
+			function getSingleTodo() {
+				const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+				return fetch(url)
+					.then((response) => response.json())
+					.catch((error) => console.log(error));
+			}
+
+			getSingleTodo().then((todo) => {
+				displayTodo(todo);
+			});
+		</script>
+	</body>
+</html>

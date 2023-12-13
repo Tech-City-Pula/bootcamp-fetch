@@ -1,0 +1,47 @@
+.todos {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, var(--todo-size));
+	grid-auto-rows: var(--todo-size);
+	width: 100%;
+	align-items: center;
+	gap: 1rem;
+	margin: 0 auto;
+	height: 50vh;
+	max-height: 50vh;
+	overflow-y: auto;
+	padding: 1rem;
+	border: 1px solid var(--black);
+	border-radius: 0.5rem;
+}
+
+.todo {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	gap: 1rem;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+	width: var(--todo-size);
+	height: var(--todo-size);
+	transition: all 0.15s ease-in-out;
+}
+
+.todo:hover {
+	scale: 1.05;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+
+.todo-title {
+	font-weight: 500;
+	color: var(--white);
+}
+
+.todo-completed {
+	background: rgb(57, 238, 57);
+}
+
+.todo-not-completed {
+	background: rgb(254, 83, 83);
+}
