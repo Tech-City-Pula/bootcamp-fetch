@@ -1,0 +1,5 @@
+GET https://akabab.github.io/starwars-api/api/all.json
+
+###
+
+GET https://akabab.github.io/starwars-api/api/id/{{$randomInt 1 10}}.json
